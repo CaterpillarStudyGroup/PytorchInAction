@@ -1,7 +1,17 @@
-# 信息提取
+# 图像特征
 
-# 数据增强
+## 信息提取
 
-# 数据清洗
+### 显式提取
+
+分割、crop
+
+### 隐式提取
+
+VAE Embedding, ViT Embedding, Clip Emgedding, 自定义Embedding
+
+## 数据增强
+
+## 数据清洗
 
 # 不同特征的混合
