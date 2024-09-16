@@ -4,7 +4,7 @@ language = "en"
 description = "The note of Papers"
 multilingual = false
 src = "src"
-title = "ReadPapers"
+title = "PytorchInActions"
 
 [output.html]
 mathjax-support = true
