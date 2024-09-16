@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="auto-number-title.css" />
+
 # 图像特征
 
 ## 信息提取
