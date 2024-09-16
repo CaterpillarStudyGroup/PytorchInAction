@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="auto-number-title.css" />
+<link rel="stylesheet" type="text/css" href="theme/auto-number-title.css" />
 
 # 图像特征
 
