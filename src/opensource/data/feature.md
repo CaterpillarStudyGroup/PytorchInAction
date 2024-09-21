@@ -16,4 +16,10 @@ VAE Embedding, ViT Embedding, Clip Emgedding, 自定义Embedding
 
 ## 数据清洗
 
+# 2D Pose
+
+## 信息提取
+
+转成图像->图像Embedding
+
 # 不同特征的混合
