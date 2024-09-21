@@ -7,8 +7,10 @@
 # 开源代码实战
 - [数据]()
   - [特征数据的加工]()
-    - [图像数据](./opensource/data/feature/image.md)
-    - [视频数据](./opensource/data/feature/video.md)
+    - [图像信息](./opensource/data/feature/image.md)
+    - [视频信息](./opensource/data/feature/video.md)
+    - [2D Pose信息](./opensource/data/feature/2DPose.md)
+    - [拖拽交互信息](./opensource/data/feature/drag.md)
   - [标签数据的监督](./opensource/data/label.md)
   - [不同数据集的组合](./opensource/data/combine.md)
   - [数据同步](./opensource/data/sync.md)
