@@ -11,6 +11,7 @@
     - [图像信息 - Clip Embedding](./opensource/data/feature/image_clip_embedding.md)
     - [视频信息](./opensource/data/feature/video.md)
     - [文本信息](./opensource/data/feature/text.md)
+    - [类别信息](./opensource/data/feature/class.md)
     - [2D Pose信息](./opensource/data/feature/2DPose.md)
     - [拖拽交互信息](./opensource/data/feature/drag.md)
   - [标签数据的监督](./opensource/data/label.md)
