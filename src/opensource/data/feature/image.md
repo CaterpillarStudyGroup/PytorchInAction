@@ -10,8 +10,18 @@
 
 通过Encoder得到特征在latent space的embedding。Encoder和Decoder通常成对使用，通过Decoder把latent embedding还原成原始信息。  
 
-VAE Embedding, ViT Embedding, Clip Emgedding, 自定义Embedding
+VAE Embedding, ViT Embedding, 自定义Embedding    
 
+1. Clip Emgedding    
+CLIp 是一个预训练模型。它将图像和文本在 latent 空间对齐。使得图像的 Embedding 能够提取图像中的 high level 的语义信息。    
+常用于作为控制信号，从 high level 引导图像/视频的生成。   
+示例代码：[TODO]    
+开源范例：46     
+
+2. SD AutoEncoder    
+SD AutoEncoder 是预训练模型 SD 中的一部分，本质上是一个 VAE. SD Encoder 保留了图像的结构化特点，因此 SD Encoder 得到的是 2D Embedding.    
+示例代码：[TODO]    
+开源范例：46  
 ## 数据增强
 
 ## 数据清洗
