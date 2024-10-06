@@ -22,3 +22,15 @@ class FrozenCLIPT5Encoder(AbstractEncoder):
         t5_z = self.t5_encoder.encode(text)
         return [clip_z, t5_z]
 ```
+
+2. 调制
+
+调制是指通过调整特征中每个元素的均值和方差，使某些元素与其它元素区别开来。但又不影响特征的原始结构。
+
+调制应用于两个具有相似结构的feature，其中一个feature通过网络生成具有相同结构的2通道信息，分别是均值和方差，把均值和方差bitwise地作用到另一个feature上。
+
+**适用场景**：两个具有相似结构的feature。    
+**示例代码**：不开源    
+**开源范例**: [47](https://caterpillarstudygroup.github.io/ReadPapers/47.html)   
+
+3. 相加

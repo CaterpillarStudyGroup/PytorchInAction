@@ -21,7 +21,7 @@ CLIP 是一个预训练模型。它将图像和文本在 latent 空间对齐。�
 2. SD AutoEncoder    
 SD AutoEncoder 是预训练模型 SD 中的一部分，本质上是一个 VAE. SD Encoder 保留了图像的结构化特点，因此 SD Encoder 得到的是 2D Embedding.    
 示例代码：[TODO]    
-开源范例：[](https://caterpillarstudygroup.github.io/ReadPapers/46.html)  
+开源范例：[link](https://caterpillarstudygroup.github.io/ReadPapers/46.html)  
 
 3. VQGAN
 VQGAN是ModelScopeT2V中用于图像编码的预训练模型。
