@@ -4,12 +4,16 @@
 
 # condition编码后UNet feature做cross attention
 
-这种方法通常用于非结构化的Embedding的注入，例如Clip Embedding。  
-示例代码：[TODO]
-开源范例：
-1. ModelScopeT2V
-ModelScopeT2V的spatial attention有两层。第一层是feature与embedding的cross attention，第二层是self-attention。  
+这种方法通常用于非结构化的Embedding的注入，例如Clip Embedding。
+
+1. **注入方式**：图像/文本条件经过Clip Embedding之后与UNet Spatial Attention Layer的第一层进行cross attention。  
+M
+**示例代码**：[TODO]
+**开源范例**：ModelScopeT2V  
+odelScopeT2V的spatial attention有两层。第一层是feature与embedding的cross attention，第二层是self-attention。 
+
 2. Stable Diffusion
+3. 图像经过Image Encoder之后与UNet的feature进行cross attention。  
 
 # condition与noise在channel维度的concat
 
