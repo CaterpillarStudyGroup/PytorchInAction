@@ -13,7 +13,10 @@ M
 odelScopeT2V的spatial attention有两层。第一层是feature与embedding的cross attention，第二层是self-attention。 
 
 2. Stable Diffusion
-3. 图像经过Image Encoder之后与UNet的feature进行cross attention。  
+3. **注入方式**：图像经过Image Encoder之后与UNet的feature进行cross attention。  
+**示例代码**：不开源    
+**开源范例**: [47](https://caterpillarstudygroup.github.io/ReadPapers/47.html)   
+47中实际上是把视频首帧作为reference Image，修改UNet Spatial Layer的self attention层，改成与首帧的cross attention。所以在47的UNet Spatial Layer设计中，第一层是与(Reference Image Clip Embedding, drag token)的cross attention，第二帧是与首帧UNet Feature的cross
 
 # condition与noise在channel维度的concat
 
