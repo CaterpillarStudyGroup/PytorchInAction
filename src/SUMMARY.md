@@ -17,6 +17,7 @@
   - [标签数据的监督](./opensource/data/label.md)
   - [数据的结合]()
     - [不同特征的结合](./opensource/data/combine/feature.md)
+    - [不同特征的融合](./opensource/data/combine/multimodal.md)
     - [控制信号的注入](./opensource/data/combine/condition.md)
     - [不同数据集的结合](./opensource/data/combine/dataset.md)
     - [不同目标的结合](./opensource/data/combine/target.md)
