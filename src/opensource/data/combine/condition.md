@@ -12,7 +12,8 @@ M
 **开源范例**：ModelScopeT2V  
 odelScopeT2V的spatial attention有两层。第一层是feature与embedding的cross attention，第二层是self-attention。 
 
-2. Stable Diffusion
+2. ControlNet
+
 3. **注入方式**：图像经过Image Encoder之后与UNet的feature进行cross attention。  
 **示例代码**：不开源    
 **开源范例**: [47](https://caterpillarstudygroup.github.io/ReadPapers/47.html)   
