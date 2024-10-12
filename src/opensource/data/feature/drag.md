@@ -26,6 +26,14 @@ w * h * 2的 矩阵，描述相对于上一帧的位移。由于是拖拽是稀�
 **示例代码**：不开源    
 **开源范例**: [51](https://caterpillarstudygroup.github.io/ReadPapers/51.html)  
 
+### 生成dense光流信息
+
+**适用场景**：稀疏光流信息可能存在歧义，当需要准确地控制或者要降低学习难度时，可以先生成dense光流。  
+**开源范例**:   
+[51](https://caterpillarstudygroup.github.io/ReadPapers/51.html)  
+[Motion-I2V](https://caterpillarstudygroup.github.io/ReadPapers/44.html)  
+
+
 ### 隐式编码    
 
 ## 数据清洗
