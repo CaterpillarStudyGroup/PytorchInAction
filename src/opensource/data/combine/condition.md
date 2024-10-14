@@ -23,7 +23,19 @@ odelScopeT2V的spatial attention有两层。第一层是feature与embedding的cr
 
 这种方法通常用于与图像具有相似结构的Embedding的注入，例如VQGAN Embedding。
 示例代码：[TODO]  
-开源范例：
-1. ModelScopeT2V
+开源范例：  
+1. Stable Diffusion（图像生成模型）
+
+> &#x2705; 如果是图像生成模型，condition可以是reference image的2D embedding。
+
+2. ModelScopeT2V（视频生成模型）
 ModelScopeT2V的spatial attention有两层。第一层是feature与embedding的cross attention，第二层是self-attention。  
-2. Stable Diffusion
+
+> &#x2705; 如果是视频生成模型，个人认为，reference image不适合用这种方式注入。因为reference image是静态的，不能与要生成的视频在时序上对齐。  
+
+# condition用同样的方式embedding之后直接替换noise的某些帧
+
+这种方式可以实现强制要求生成的某些帧为指定内容。  
+
+**示例代码**：不开源    
+**开源范例**: [Motion-I2V](https://caterpillarstudygroup.github.io/ReadPapers/44.html)  
