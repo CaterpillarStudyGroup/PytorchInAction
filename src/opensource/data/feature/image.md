@@ -32,6 +32,18 @@ VQGAN是ModelScopeT2V中用于图像编码的预训练模型。
 示例代码：[TODO]
 开源范例：ModelScopeT2V
 
+4. 编码为一个特定的token
+
+在字典中选一个不常用（预训练模型中对这个token没有很强的先验）的token，这个token指代refernce image并进行finetune。   
+示例代码：[TODO]  
+开源范例：DreamBooth
+
+5. Texture Inversion
+
+把图像用Clip Embedding编码为一个embedding，嵌入到正常的字符串中。这种做不法不止能嵌入图像，还是让目标符合文本描述。    
+示例代码：[TODO]  
+开源范例：MagicMe
+
 ## 数据增强
 
 ## 数据清洗
