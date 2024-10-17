@@ -4,7 +4,7 @@
 
 1. 随机高斯初始化
 
-**开源范例**： [LORA](https://caterpillarstudygroup.github.io/ReadPapers/46.html)
+**开源范例**： [LORA](https://caterpillarstudygroup.github.io/ReadPapers/38.html)
 
 ## 插件的初始化
 
@@ -16,4 +16,4 @@
 
 2. 对 A 使用随机高斯初始化，对 B 使用零，因此 ΔW = BA 在训练开始时为零。  
 
-**开源范例**： [LORA](https://caterpillarstudygroup.github.io/ReadPapers/46.html)
+**开源范例**： [LORA](https://caterpillarstudygroup.github.io/ReadPapers/38.html)
