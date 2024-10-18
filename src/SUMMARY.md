@@ -3,6 +3,8 @@
 [Introduction](README.md)
 
 # pytorch的基本用法
+- [声明](./basic/create.md)
+- [初始化](./basic/init.md)
 
 # 开源代码实战
 - [数据]()
@@ -29,3 +31,6 @@
 - [框架]()
   - [训练方法](./opensource/framework/training.md)
 # pytorch深入理解
+
+# 其它常用库
+
