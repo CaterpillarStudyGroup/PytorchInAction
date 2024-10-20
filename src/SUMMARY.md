@@ -31,6 +31,7 @@
 - [框架]()
   - [训练方法](./opensource/framework/training.md)
 # pytorch深入理解
-
+- [单机多卡](./opensource/DP.md)
+- [多机多卡](./opensource/DDP.md)
 # 其它常用库
 
