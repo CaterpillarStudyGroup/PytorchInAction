@@ -25,15 +25,19 @@ for epoch in range(self.config.epochs):
     # save model
     torch.save(model.state_dict(), self.model_dir / f"model_{epoch+1}.pkl")
 self.logger.info('training done!')
+```
 
-def train_epoch(self, epoch, model, train_dl, optimizer, scheduler, criterion):
+# 训练一个epoch
+
+```
+def train_epoch(epoch, model, train_dl, optimizer, scheduler, criterion):
     model.train()
     train_loss = []
     tbar = tqdm(train_dl, total=len(train_dl), desc='Training')
-    for idx, dl in enumerate(tbar):
-        feature, label = dl
-        feature = feature.to(self.device)
-        label = label.to(self.device)
+    for idx, batch in enumerate(tbar):
+        feature, label = batch
+        feature = feature.to(device)
+        label = label.to(device)
 
         optimizer.zero_grad()
         pred = model(feature)
