@@ -6,6 +6,7 @@
 - [声明](./basic/create.md)
 - [初始化](./basic/init.md)
 - [层](./basic/layers.md)
+- [数据](./basic/dataloader.md)
 - [训练](./basic/train.md)
 
 
@@ -33,6 +34,7 @@
   - [时序层](./opensource/model/temporal.md)
 - [框架]()
   - [训练方法](./opensource/framework/training.md)
+  - [长序列推断策略](./opensource/framework/long_term.md)
 # pytorch深入理解
 - [单机多卡](./opensource/DP.md)
 - [多机多卡](./opensource/DDP.md)
