@@ -35,6 +35,7 @@
 - [框架]()
   - [训练方法](./opensource/framework/training.md)
   - [长序列推断策略](./opensource/framework/long_term.md)
+- [评价指标](./opensource/evalute.md)
 # pytorch深入理解
 - [单机多卡](./opensource/DP.md)
 - [多机多卡](./opensource/DDP.md)

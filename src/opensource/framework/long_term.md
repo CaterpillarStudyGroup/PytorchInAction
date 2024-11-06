@@ -7,3 +7,6 @@
 **开源范例**:   
 [37](https://caterpillarstudygroup.github.io/ReadPapers/37.html)  
 MultiDiffusion
+
+2. 自回归方式
+上一个clip的最后一帧作为下一个clip的起始帧
