@@ -24,8 +24,34 @@ CLIP 是一个预训练模型。它将图像和文本在 latent 空间对齐。�
 
 2. SD AutoEncoder    
 SD AutoEncoder 是预训练模型 SD 中的一部分，本质上是一个 VAE. SD Encoder 保留了图像的结构化特点，因此 SD Encoder 得到的是 2D Embedding.    
-示例代码：[TODO]    
-开源范例：[link](https://caterpillarstudygroup.github.io/ReadPapers/46.html)  
+示例代码：
+
+```python
+from diffusers import AutoencoderKL
+vae = AutoencoderKL.from_pretrained(config.pretrained_vae_path)
+vae.to(device)
+vae.requires_grad_(False)
+ref_img = rearrange(ref_img, "b f c h w -> (b f) c h w")
+if not sample:
+    ref_img = vae.encode(ref_img).latent_dist.mean * 0.18215
+else:
+    ref_img = vae.encode(ref_img).latent_dist.sample() * 0.18215
+
+latents = ref_img
+for frame_idx in tqdm(range(latents.shape[0]), disable=(rank!=0), leave=False):
+    if decoder_consistency is not None:
+        video.append(decoder_consistency(latents[frame_idx:frame_idx+1]))
+    else:
+        video.append(self.vae.decode(latents[frame_idx:frame_idx+1]).sample)
+video = torch.cat(video)
+video = rearrange(video, "(b f) c h w -> b c f h w", f=video_length)
+video = (video / 2 + 0.5).clamp(0, 1)
+# we always cast to float32 as this does not cause significant overhead and is compatible with bfloa16
+video = video.cpu().float().numpy()
+```
+
+开源范例：[link](https://caterpillarstudygroup.github.io/ReadPapers/46.html)、 
+[TCAN](https://caterpillarstudygroup.github.io/ReadPapers/37.html)
 
 3. VQGAN
 VQGAN是ModelScopeT2V中用于图像编码的预训练模型。
