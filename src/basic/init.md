@@ -1,3 +1,10 @@
+0. 随机种子
+
+```python
+generator = torch.Generator(device=torch.device("cuda:0"))
+generator.manual_seed(torch.initial_seed())
+```
+
 1. 初始化为全0
 
 ```python

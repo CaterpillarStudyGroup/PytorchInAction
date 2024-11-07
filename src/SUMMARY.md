@@ -7,6 +7,7 @@
 - [初始化](./basic/init.md)
 - [层](./basic/layers.md)
 - [数据](./basic/dataloader.md)
+- [pipeline](./basic/pipeline.md)
 - [训练](./basic/train.md)
 
 
@@ -36,8 +37,10 @@
   - [训练方法](./opensource/framework/training.md)
   - [长序列推断策略](./opensource/framework/long_term.md)
 - [评价指标](./opensource/evalute.md)
+
 # pytorch深入理解
 - [单机多卡](./opensource/DP.md)
 - [多机多卡](./opensource/DDP.md)
-# 其它常用库
 
+# 其它常用库
+- [config](./libs/config.md)
