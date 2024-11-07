@@ -44,3 +44,4 @@
 
 # 其它常用库
 - [config](./libs/config.md)
+- [cv2](./libs/cv2.md)
