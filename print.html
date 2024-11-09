@@ -1,0 +1,1142 @@
+<!DOCTYPE HTML>
+<link rel="stylesheet" type="text/css" href="auto-number-title.css" />
+
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>PytorchInActions</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The note of Papers">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/pagetoc.css">
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">pytorch的基本用法</li><li class="chapter-item expanded "><a href="basic/create.html"><strong aria-hidden="true">1.</strong> 声明</a></li><li class="chapter-item expanded "><a href="basic/init.html"><strong aria-hidden="true">2.</strong> 初始化</a></li><li class="chapter-item expanded "><a href="basic/layers.html"><strong aria-hidden="true">3.</strong> 层</a></li><li class="chapter-item expanded "><a href="basic/dataloader.html"><strong aria-hidden="true">4.</strong> 数据</a></li><li class="chapter-item expanded "><a href="basic/pipeline.html"><strong aria-hidden="true">5.</strong> pipeline</a></li><li class="chapter-item expanded "><a href="basic/train.html"><strong aria-hidden="true">6.</strong> 训练</a></li><li class="chapter-item expanded affix "><li class="part-title">开源代码实战</li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> 数据</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">7.1.</strong> 特征数据的加工</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="opensource/data/feature/image.html"><strong aria-hidden="true">7.1.1.</strong> 图像信息</a></li><li class="chapter-item expanded "><a href="opensource/data/feature/image_clip_embedding.html"><strong aria-hidden="true">7.1.2.</strong> 图像信息 - Clip Embedding</a></li><li class="chapter-item expanded "><a href="opensource/data/feature/video.html"><strong aria-hidden="true">7.1.3.</strong> 视频信息</a></li><li class="chapter-item expanded "><a href="opensource/data/feature/text.html"><strong aria-hidden="true">7.1.4.</strong> 文本信息</a></li><li class="chapter-item expanded "><a href="opensource/data/feature/class.html"><strong aria-hidden="true">7.1.5.</strong> 类别信息</a></li><li class="chapter-item expanded "><a href="opensource/data/feature/2DPose.html"><strong aria-hidden="true">7.1.6.</strong> 2D Pose信息</a></li><li class="chapter-item expanded "><a href="opensource/data/feature/drag.html"><strong aria-hidden="true">7.1.7.</strong> 拖拽交互信息</a></li></ol></li><li class="chapter-item expanded "><a href="opensource/data/label.html"><strong aria-hidden="true">7.2.</strong> 标签数据的监督</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.3.</strong> 数据的结合</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="opensource/data/combine/feature.html"><strong aria-hidden="true">7.3.1.</strong> 不同特征的结合</a></li><li class="chapter-item expanded "><a href="opensource/data/combine/multimodal.html"><strong aria-hidden="true">7.3.2.</strong> 不同特征的融合</a></li><li class="chapter-item expanded "><a href="opensource/data/combine/condition.html"><strong aria-hidden="true">7.3.3.</strong> 控制信号的注入</a></li><li class="chapter-item expanded "><a href="opensource/data/combine/dataset.html"><strong aria-hidden="true">7.3.4.</strong> 不同数据集的结合</a></li><li class="chapter-item expanded "><a href="opensource/data/combine/target.html"><strong aria-hidden="true">7.3.5.</strong> 不同目标的结合</a></li></ol></li><li class="chapter-item expanded "><a href="opensource/data/sync.html"><strong aria-hidden="true">7.4.</strong> 数据同步</a></li><li class="chapter-item expanded "><a href="opensource/data/prepost.html"><strong aria-hidden="true">7.5.</strong> 预处理和后处理</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> 模型</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="opensource/model/init.html"><strong aria-hidden="true">8.1.</strong> 参数初始化</a></li><li class="chapter-item expanded "><a href="opensource/model/temporal.html"><strong aria-hidden="true">8.2.</strong> 时序层</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> 框架</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="opensource/framework/training.html"><strong aria-hidden="true">9.1.</strong> 训练方法</a></li><li class="chapter-item expanded "><a href="opensource/framework/long_term.html"><strong aria-hidden="true">9.2.</strong> 长序列推断策略</a></li></ol></li><li class="chapter-item expanded "><a href="opensource/evalute.html"><strong aria-hidden="true">10.</strong> 评价指标</a></li><li class="chapter-item expanded affix "><li class="part-title">pytorch深入理解</li><li class="chapter-item expanded "><a href="opensource/DP.html"><strong aria-hidden="true">11.</strong> 单机多卡</a></li><li class="chapter-item expanded "><a href="opensource/DDP.html"><strong aria-hidden="true">12.</strong> 多机多卡</a></li><li class="chapter-item expanded affix "><li class="part-title">其它常用库</li><li class="chapter-item expanded "><a href="libs/config.html"><strong aria-hidden="true">13.</strong> config</a></li><li class="chapter-item expanded "><a href="libs/cv2.html"><strong aria-hidden="true">14.</strong> cv2</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">PytorchInActions</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/CaterpillarStudyGroup/PytorchInAction" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main><div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><ol>
+<li>声明指定维度的矩阵</li>
+</ol>
+<pre><code class="language-python">self.lora_A = nn.Parameter(self.weight.new_zeros((r, num_embeddings)))
+self.lora_B = nn.Parameter(self.weight.new_zeros((embedding_dim, r)))
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><ol start="0">
+<li>随机种子</li>
+</ol>
+<pre><code class="language-python">generator = torch.Generator(device=torch.device(&quot;cuda:0&quot;))
+generator.manual_seed(torch.initial_seed())
+</code></pre>
+<ol>
+<li>初始化为全0</li>
+</ol>
+<pre><code class="language-python">self.lora_A = nn.Parameter(self.weight.new_zeros((r, num_embeddings)))
+nn.init.zeros_(self.lora_A)
+</code></pre>
+<ol start="2">
+<li>随机高斯初始化</li>
+</ol>
+<pre><code class="language-python">self.lora_B = nn.Parameter(self.weight.new_zeros((embedding_dim, r)))
+nn.init.normal_(self.lora_B)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="model"><a class="header" href="#model">Model</a></h1>
+<pre><code class="language-python">class MyModel(nn.Module):
+    def __init__(self, config):
+        super().__init__()
+        self.layer = nn.Sequential([
+            nn.Linear(indim=..., outdim=...)
+            nn.Dropout(p=...)
+        ])
+
+    def forward(self, x):
+        x = self.layer(x)
+        return x
+</code></pre>
+<h1 id="dropout"><a class="header" href="#dropout">Dropout</a></h1>
+<pre><code class="language-python">import torch.nn as nn
+
+# Optional dropout
+if lora_dropout &gt; 0.:
+    self.lora_dropout = nn.Dropout(p=lora_dropout)
+else:
+    self.lora_dropout = lambda x: x
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="准备数据流程"><a class="header" href="#准备数据流程">准备数据流程</a></h1>
+<pre><code class="language-python">def create_dataloader():
+    # create dataset
+    dataset = MyDataset(...)
+
+    # split dataset
+    dataset_train, dataset_test = split_dataset(dataset, rate=0.8)
+    dataset_valid, dataset_test = split_dataset(dataset_test, rate=0.5)
+
+    train_dataloader = DataLoader(
+            dataset=dataset_train,
+            batch_size=...,
+            pin_memory=True,
+            shuffle=True,
+        )
+
+    valid_dataloader = DataLoader(
+            dataset=dataset_valid,
+            batch_size=...,
+            shuffle=False,
+        )
+
+    test_dataloader = DataLoader(
+            dataset=dataset_test,
+            batch_size=...,
+            shuffle=False,
+        )
+</code></pre>
+<h1 id="读入数据"><a class="header" href="#读入数据">读入数据</a></h1>
+<pre><code class="language-python">class MyDataset(Dataset):
+    def __init__(self, config, data):
+        super().__init__()
+        self.config = config
+        self.data = data
+
+    def __len__(self):
+        return len(self.data.data)
+
+    def __getitem__(self, idx):
+        feature = torch.Tensor(self.data.data)[idx]
+        label = torch.LongTensor(self.data.target)[idx]
+        return feature, label
+</code></pre>
+<h1 id="reference"><a class="header" href="#reference">reference</a></h1>
+<p>链接: https://emoryhuang.cn/blog/4276851715.html#load-create-dataset</p>
+<div style="break-before: page; page-break-before: always;"></div><pre><code class="language-python"># 使用register_modules，将参数设为内部属性。
+self.register_modules(
+    vae=vae,
+    text_encoder=text_encoder,
+    tokenizer=tokenizer,
+    unet=unet,
+    scheduler=scheduler,
+    safety_checker=safety_checker,
+    feature_extractor=feature_extractor,
+    image_encoder=image_encoder,
+)
+</code></pre>
+<h1 id="reference-1"><a class="header" href="#reference-1">Reference</a></h1>
+<p>原文链接：https://blog.csdn.net/weixin_48598862/article/details/135920566</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="训练流程"><a class="header" href="#训练流程">训练流程</a></h1>
+<pre><code class="language-python"># prepare optimizer and criterion
+optimizer = torch.optim.Adam(model.parameters(), lr=self.config.learning_rate)
+scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=20, gamma=0.1)
+criterion = torch.nn.CrossEntropyLoss()
+
+# prepare dataloader
+train_dl = dataloader.train_dataloader()
+valid_dl = dataloader.valid_dataloader()
+
+# prepare model
+model = model.to(self.device)
+
+self.logger.info('start training...')
+self.logger.info(f'device: {self.device}')
+for epoch in range(self.config.epochs):
+    # train epoch
+    train_epoch(epoch, model, train_dl, optimizer, scheduler, criterion)
+
+    # valid epoch
+    valid_epoch(epoch, model, valid_dl, criterion)
+
+    # save model
+    torch.save(model.state_dict(), self.model_dir / f&quot;model_{epoch+1}.pkl&quot;)
+self.logger.info('training done!')
+</code></pre>
+<h1 id="训练一个epoch"><a class="header" href="#训练一个epoch">训练一个epoch</a></h1>
+<pre><code>def train_epoch(epoch, model, train_dl, optimizer, scheduler, criterion):
+    model.train()
+    train_loss = []
+    tbar = tqdm(train_dl, total=len(train_dl), desc='Training')
+    for idx, batch in enumerate(tbar):
+        feature, label = batch
+        feature = feature.to(device)
+        label = label.to(device)
+
+        optimizer.zero_grad()
+        pred = model(feature)
+        loss = criterion(pred, label)
+        loss.backward()
+        optimizer.step()
+
+        train_loss.append(loss.item())
+        # update bar
+        tbar.set_description(f'Epoch [{epoch + 1}/{self.config.epochs}]')
+        tbar.set_postfix(loss=f'{np.mean(train_loss):.4f}',
+                            lr=scheduler.get_last_lr()[0])
+    scheduler.step()
+</code></pre>
+<h1 id="组件"><a class="header" href="#组件">组件</a></h1>
+<p>Dataloader
+Optimizer</p>
+<ul>
+<li>Adam
+Loss</li>
+<li>CrossEntropyLoss, MSELoss
+Scheduler</li>
+<li>LambdaLR, StepLR</li>
+</ul>
+<h1 id="reference-2"><a class="header" href="#reference-2">Reference</a></h1>
+<p>https://emoryhuang.cn/blog/4276851715.html</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="图像特征"><a class="header" href="#图像特征">图像特征</a></h1>
+<h2 id="信息提取"><a class="header" href="#信息提取">信息提取</a></h2>
+<h3 id="显式提取"><a class="header" href="#显式提取">显式提取</a></h3>
+<ol>
+<li>提取关键点</li>
+</ol>
+<p>通常用于与人相关的应用，例如要提取人的动作（趋势）</p>
+<pre><code class="language-python">from dwpose.annotator.dwpose import DWposeDetector
+
+dwpose = DWposeDetector()
+pose, posedict = dwpose(img)
+</code></pre>
+<p>分割、crop</p>
+<h3 id="隐式提取"><a class="header" href="#隐式提取">隐式提取</a></h3>
+<p>通过Encoder得到特征在latent space的embedding。Encoder和Decoder通常成对使用，通过Decoder把latent embedding还原成原始信息。</p>
+<p>VAE Embedding, ViT Embedding, 自定义Embedding</p>
+<ol>
+<li>
+<p>Clip Embedding<br />
+CLIP 是一个预训练模型。它将图像和文本在 latent 空间对齐。使得图像的 Embedding 能够提取图像中的 high level 的语义信息。<br />
+常用于作为控制信号，从 high level 引导图像/视频的生成。<br />
+示例代码：<a href="opensource/data/feature/./image_clip_embedding.html"></a><br />
+开源范例：<a href="https://caterpillarstudygroup.github.io/ReadPapers/46.html"></a></p>
+</li>
+<li>
+<p>SD AutoEncoder<br />
+SD AutoEncoder 是预训练模型 SD 中的一部分，本质上是一个 VAE. SD Encoder 保留了图像的结构化特点，因此 SD Encoder 得到的是 2D Embedding.<br />
+示例代码：</p>
+</li>
+</ol>
+<pre><code class="language-python">from diffusers import AutoencoderKL
+vae = AutoencoderKL.from_pretrained(config.pretrained_vae_path)
+vae.to(device)
+vae.requires_grad_(False)
+ref_img = rearrange(ref_img, &quot;b f c h w -&gt; (b f) c h w&quot;)
+if not sample:
+    ref_img = vae.encode(ref_img).latent_dist.mean * 0.18215
+else:
+    ref_img = vae.encode(ref_img).latent_dist.sample() * 0.18215
+
+latents = ref_img
+for frame_idx in tqdm(range(latents.shape[0]), disable=(rank!=0), leave=False):
+    if decoder_consistency is not None:
+        video.append(decoder_consistency(latents[frame_idx:frame_idx+1]))
+    else:
+        video.append(self.vae.decode(latents[frame_idx:frame_idx+1]).sample)
+video = torch.cat(video)
+video = rearrange(video, &quot;(b f) c h w -&gt; b c f h w&quot;, f=video_length)
+video = (video / 2 + 0.5).clamp(0, 1)
+# we always cast to float32 as this does not cause significant overhead and is compatible with bfloa16
+video = video.cpu().float().numpy()
+</code></pre>
+<p>开源范例：<a href="https://caterpillarstudygroup.github.io/ReadPapers/46.html">link</a>、 
+<a href="https://caterpillarstudygroup.github.io/ReadPapers/37.html">TCAN</a></p>
+<ol start="3">
+<li>
+<p>VQGAN
+VQGAN是ModelScopeT2V中用于图像编码的预训练模型。
+示例代码：[TODO]
+开源范例：ModelScopeT2V</p>
+</li>
+<li>
+<p>编码为一个特定的token</p>
+</li>
+</ol>
+<p>在字典中选一个不常用（预训练模型中对这个token没有很强的先验）的token，这个token指代refernce image并进行finetune。<br />
+示例代码：[TODO]<br />
+开源范例：DreamBooth</p>
+<ol start="5">
+<li>Texture Inversion</li>
+</ol>
+<p>把图像用Clip Embedding编码为一个embedding，嵌入到正常的字符串中。这种做不法不止能嵌入图像，还是让目标符合文本描述。<br />
+示例代码：[TODO]<br />
+开源范例：MagicMe</p>
+<h2 id="数据增强"><a class="header" href="#数据增强">数据增强</a></h2>
+<h2 id="数据清洗"><a class="header" href="#数据清洗">数据清洗</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="clip-embedding"><a class="header" href="#clip-embedding">Clip Embedding</a></h1>
+<blockquote>
+<p>stablediffusion</p>
+</blockquote>
+<pre><code class="language-python">class ClipImageEmbedder(nn.Module):
+    def __init__(
+            self,
+            model,
+            jit=False,
+            device='cuda' if torch.cuda.is_available() else 'cpu',
+            antialias=True,
+            ucg_rate=0.
+    ):
+        super().__init__()
+        from clip import load as load_clip
+        self.model, _ = load_clip(name=model, device=device, jit=jit)
+
+        self.antialias = antialias
+
+        self.register_buffer('mean', torch.Tensor([0.48145466, 0.4578275, 0.40821073]), persistent=False)
+        self.register_buffer('std', torch.Tensor([0.26862954, 0.26130258, 0.27577711]), persistent=False)
+        self.ucg_rate = ucg_rate
+
+    def preprocess(self, x):
+        # normalize to [0,1]
+        x = kornia.geometry.resize(x, (224, 224),
+                                   interpolation='bicubic', align_corners=True,
+                                   antialias=self.antialias)
+        x = (x + 1.) / 2.
+        # re-normalize according to clip
+        x = kornia.enhance.normalize(x, self.mean, self.std)
+        return x
+
+    def forward(self, x, no_dropout=False):
+        # x is assumed to be in range [-1,1]
+        out = self.model.encode_image(self.preprocess(x))
+        out = out.to(x.dtype)
+        if self.ucg_rate &gt; 0. and not no_dropout:
+            out = torch.bernoulli((1. - self.ucg_rate) * torch.ones(out.shape[0], device=out.device))[:, None] * out
+        return out
+</code></pre>
+<h1 id="openclip-embedding"><a class="header" href="#openclip-embedding">OpenClip Embedding</a></h1>
+<blockquote>
+<p>stablediffusion</p>
+</blockquote>
+<pre><code class="language-python">class FrozenOpenCLIPImageEmbedder(nn.Module):
+    &quot;&quot;&quot;
+    Uses the OpenCLIP vision transformer encoder for images
+    &quot;&quot;&quot;
+
+    def __init__(self, arch=&quot;ViT-H-14&quot;, version=&quot;laion2b_s32b_b79k&quot;, device=&quot;cuda&quot;, max_length=77,
+                 freeze=True, layer=&quot;pooled&quot;, antialias=True, ucg_rate=0.):
+        super().__init__()
+        model, _, _ = open_clip.create_model_and_transforms(arch, device=torch.device('cpu'),
+                                                            pretrained=version, )
+        del model.transformer
+        self.model = model
+
+        self.device = device
+        self.max_length = max_length
+        if freeze:
+            self.freeze()
+        self.layer = layer
+        if self.layer == &quot;penultimate&quot;:
+            raise NotImplementedError()
+            self.layer_idx = 1
+
+        self.antialias = antialias
+
+        self.register_buffer('mean', torch.Tensor([0.48145466, 0.4578275, 0.40821073]), persistent=False)
+        self.register_buffer('std', torch.Tensor([0.26862954, 0.26130258, 0.27577711]), persistent=False)
+        self.ucg_rate = ucg_rate
+
+    def preprocess(self, x):
+        # normalize to [0,1]
+        x = kornia.geometry.resize(x, (224, 224),
+                                   interpolation='bicubic', align_corners=True,
+                                   antialias=self.antialias)
+        x = (x + 1.) / 2.
+        # renormalize according to clip
+        x = kornia.enhance.normalize(x, self.mean, self.std)
+        return x
+
+    def freeze(self):
+        self.model = self.model.eval()
+        for param in self.parameters():
+            param.requires_grad = False
+
+    @autocast
+    def forward(self, image, no_dropout=False):
+        z = self.encode_with_vision_transformer(image)
+        if self.ucg_rate &gt; 0. and not no_dropout:
+            z = torch.bernoulli((1. - self.ucg_rate) * torch.ones(z.shape[0], device=z.device))[:, None] * z
+        return z
+
+    def encode_with_vision_transformer(self, img):
+        img = self.preprocess(img)
+        x = self.model.visual(img)
+        return x
+
+    def encode(self, text):
+        return self(text)
+</code></pre>
+<h1 id="clipembeddingnoiseaugmentation"><a class="header" href="#clipembeddingnoiseaugmentation">CLIPEmbeddingNoiseAugmentation</a></h1>
+<blockquote>
+<p>stablediffusion</p>
+</blockquote>
+<pre><code class="language-python">from ldm.modules.diffusionmodules.upscaling import ImageConcatWithNoiseAugmentation
+from ldm.modules.diffusionmodules.openaimodel import Timestep
+
+
+class CLIPEmbeddingNoiseAugmentation(ImageConcatWithNoiseAugmentation):
+    def __init__(self, *args, clip_stats_path=None, timestep_dim=256, **kwargs):
+        super().__init__(*args, **kwargs)
+        if clip_stats_path is None:
+            clip_mean, clip_std = torch.zeros(timestep_dim), torch.ones(timestep_dim)
+        else:
+            clip_mean, clip_std = torch.load(clip_stats_path, map_location=&quot;cpu&quot;)
+        self.register_buffer(&quot;data_mean&quot;, clip_mean[None, :], persistent=False)
+        self.register_buffer(&quot;data_std&quot;, clip_std[None, :], persistent=False)
+        self.time_embed = Timestep(timestep_dim)
+
+    def scale(self, x):
+        # re-normalize to centered mean and unit variance
+        x = (x - self.data_mean) * 1. / self.data_std
+        return x
+
+    def unscale(self, x):
+        # back to original data stats
+        x = (x * self.data_std) + self.data_mean
+        return x
+
+    def forward(self, x, noise_level=None):
+        if noise_level is None:
+            noise_level = torch.randint(0, self.max_noise_level, (x.shape[0],), device=x.device).long()
+        else:
+            assert isinstance(noise_level, torch.Tensor)
+        x = self.scale(x)
+        z = self.q_sample(x, noise_level)
+        z = self.unscale(z)
+        noise_level = self.time_embed(noise_level)
+        return z, noise_level
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="视频特征"><a class="header" href="#视频特征">视频特征</a></h1>
+<h2 id="信息提取-1"><a class="header" href="#信息提取-1">信息提取</a></h2>
+<h3 id="显式信息提取"><a class="header" href="#显式信息提取">显式信息提取</a></h3>
+<p>光流、Motion、</p>
+<h3 id="隐式信息提取"><a class="header" href="#隐式信息提取">隐式信息提取</a></h3>
+<ol>
+<li>Image Encoder/Video Decoder<br />
+Encoder复用SD和Image Encoder，Decoder在SD的Image Decoder的结构上增加了时序层，使得解码出的视频有更好的连续性
+<strong>示例代码</strong>：不开源<br />
+<strong>开源范例</strong>：<a href="https://caterpillarstudygroup.github.io/ReadPapers/48.html">48</a></li>
+</ol>
+<h2 id="数据清洗-1"><a class="header" href="#数据清洗-1">数据清洗</a></h2>
+<ol>
+<li>
+<p>通过光流法检测和去除静止视频，否则生成出的视频运动幅度较小。<br />
+<strong>示例代码</strong>：[TODO]<br />
+<strong>开源范例</strong>：<a href="https://caterpillarstudygroup.github.io/ReadPapers/50.html">SVD</a></p>
+</li>
+<li>
+<p>选择用户喜欢的标签组合权重。<br />
+用不同的标签权重去训练数据，让用户根据偏好打分，然后使用符合用户偏好的数据来训练最终模型。<br />
+<strong>示例代码</strong>：[TODO]<br />
+<strong>开源范例</strong>：<a href="https://caterpillarstudygroup.github.io/ReadPapers/50.html">SVD</a></p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="clip-embedding-1"><a class="header" href="#clip-embedding-1">Clip Embedding</a></h1>
+<blockquote>
+<p>stablediffusion</p>
+</blockquote>
+<pre><code class="language-python">from transformers import T5Tokenizer, T5EncoderModel, CLIPTokenizer, CLIPTextModel
+
+class FrozenCLIPEmbedder(nn.Module):
+    &quot;&quot;&quot;Uses the CLIP transformer encoder for text (from huggingface)&quot;&quot;&quot;
+    LAYERS = [
+        &quot;last&quot;,
+        &quot;pooled&quot;,
+        &quot;hidden&quot;
+    ]
+
+    def __init__(self, version=&quot;openai/clip-vit-large-patch14&quot;, device=&quot;cuda&quot;, max_length=77,
+                 freeze=True, layer=&quot;last&quot;, layer_idx=None):  # clip-vit-base-patch32
+        super().__init__()
+        assert layer in self.LAYERS
+        self.tokenizer = CLIPTokenizer.from_pretrained(version)
+        self.transformer = CLIPTextModel.from_pretrained(version)
+        self.device = device
+        self.max_length = max_length
+        if freeze:
+            self.freeze()
+        self.layer = layer
+        self.layer_idx = layer_idx
+        if layer == &quot;hidden&quot;:
+            assert layer_idx is not None
+            assert 0 &lt;= abs(layer_idx) &lt;= 12
+
+    def freeze(self):
+        self.transformer = self.transformer.eval()
+        # self.train = disabled_train
+        for param in self.parameters():
+            param.requires_grad = False
+
+    def forward(self, text):
+        batch_encoding = self.tokenizer(text, truncation=True, max_length=self.max_length, return_length=True,
+                                        return_overflowing_tokens=False, padding=&quot;max_length&quot;, return_tensors=&quot;pt&quot;)
+        tokens = batch_encoding[&quot;input_ids&quot;].to(self.device)
+        outputs = self.transformer(input_ids=tokens, output_hidden_states=self.layer == &quot;hidden&quot;)
+        if self.layer == &quot;last&quot;:
+            z = outputs.last_hidden_state
+        elif self.layer == &quot;pooled&quot;:
+            z = outputs.pooler_output[:, None, :]
+        else:
+            z = outputs.hidden_states[self.layer_idx]
+        return z
+
+    def encode(self, text):
+        return self(text)
+</code></pre>
+<h1 id="openclip-embedding-1"><a class="header" href="#openclip-embedding-1">OpenClip Embedding</a></h1>
+<blockquote>
+<p>stablediffusion</p>
+</blockquote>
+<pre><code class="language-python">import open_clip
+
+class FrozenOpenCLIPEmbedder(nn.Module):
+    &quot;&quot;&quot;
+    Uses the OpenCLIP transformer encoder for text
+    &quot;&quot;&quot;
+    LAYERS = [
+        # &quot;pooled&quot;,
+        &quot;last&quot;,
+        &quot;penultimate&quot;
+    ]
+
+    def __init__(self, arch=&quot;ViT-H-14&quot;, version=&quot;laion2b_s32b_b79k&quot;, device=&quot;cuda&quot;, max_length=77,
+                 freeze=True, layer=&quot;last&quot;):
+        super().__init__()
+        assert layer in self.LAYERS
+        model, _, _ = open_clip.create_model_and_transforms(arch, device=torch.device('cpu'), pretrained=version)
+        del model.visual
+        self.model = model
+
+        self.device = device
+        self.max_length = max_length
+        if freeze:
+            self.freeze()
+        self.layer = layer
+        if self.layer == &quot;last&quot;:
+            self.layer_idx = 0
+        elif self.layer == &quot;penultimate&quot;:
+            self.layer_idx = 1
+        else:
+            raise NotImplementedError()
+
+    def freeze(self):
+        self.model = self.model.eval()
+        for param in self.parameters():
+            param.requires_grad = False
+
+    def forward(self, text):
+        tokens = open_clip.tokenize(text)
+        z = self.encode_with_transformer(tokens.to(self.device))
+        return z
+
+    def encode_with_transformer(self, text):
+        x = self.model.token_embedding(text)  # [batch_size, n_ctx, d_model]
+        x = x + self.model.positional_embedding
+        x = x.permute(1, 0, 2)  # NLD -&gt; LND
+        x = self.text_transformer_forward(x, attn_mask=self.model.attn_mask)
+        x = x.permute(1, 0, 2)  # LND -&gt; NLD
+        x = self.model.ln_final(x)
+        return x
+
+    def text_transformer_forward(self, x: torch.Tensor, attn_mask=None):
+        for i, r in enumerate(self.model.transformer.resblocks):
+            if i == len(self.model.transformer.resblocks) - self.layer_idx:
+                break
+            if self.model.transformer.grad_checkpointing and not torch.jit.is_scripting():
+                x = checkpoint(r, x, attn_mask)
+            else:
+                x = r(x, attn_mask=attn_mask)
+        return x
+
+    def encode(self, text):
+        return self(text)
+</code></pre>
+<h1 id="t5-embedding"><a class="header" href="#t5-embedding">T5 Embedding</a></h1>
+<blockquote>
+<p>stablediffusion</p>
+</blockquote>
+<pre><code class="language-python">from transformers import T5Tokenizer, T5EncoderModel, CLIPTokenizer, CLIPTextModel
+
+class FrozenT5Embedder(nn.Module):
+    &quot;&quot;&quot;Uses the T5 transformer encoder for text&quot;&quot;&quot;
+
+    def __init__(self, version=&quot;google/t5-v1_1-large&quot;, device=&quot;cuda&quot;, max_length=77,
+                 freeze=True):  # others are google/t5-v1_1-xl and google/t5-v1_1-xxl
+        super().__init__()
+        self.tokenizer = T5Tokenizer.from_pretrained(version)
+        self.transformer = T5EncoderModel.from_pretrained(version)
+        self.device = device
+        self.max_length = max_length  # TODO: typical value?
+        if freeze:
+            self.freeze()
+
+    def freeze(self):
+        self.transformer = self.transformer.eval()
+        # self.train = disabled_train
+        for param in self.parameters():
+            param.requires_grad = False
+
+    def forward(self, text):
+        batch_encoding = self.tokenizer(text, truncation=True, max_length=self.max_length, return_length=True,
+                                        return_overflowing_tokens=False, padding=&quot;max_length&quot;, return_tensors=&quot;pt&quot;)
+        tokens = batch_encoding[&quot;input_ids&quot;].to(self.device)
+        outputs = self.transformer(input_ids=tokens)
+
+        z = outputs.last_hidden_state
+        return z
+
+    def encode(self, text):
+        return self(text)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="embedding"><a class="header" href="#embedding">Embedding</a></h1>
+<blockquote>
+<p>stablediffusion</p>
+</blockquote>
+<pre><code class="language-python">class ClassEmbedder(nn.Module):
+    def __init__(self, embed_dim, n_classes=1000, key='class', ucg_rate=0.1):
+        super().__init__()
+        self.key = key
+        self.embedding = nn.Embedding(n_classes, embed_dim)
+        self.n_classes = n_classes
+        self.ucg_rate = ucg_rate
+
+    def forward(self, batch, key=None, disable_dropout=False):
+        if key is None:
+            key = self.key
+        # this is for use in crossattn
+        c = batch[key][:, None]
+        if self.ucg_rate &gt; 0. and not disable_dropout:
+            mask = 1. - torch.bernoulli(torch.ones_like(c) * self.ucg_rate)
+            c = mask * c + (1 - mask) * torch.ones_like(c) * (self.n_classes - 1)
+            c = c.long()
+        c = self.embedding(c)
+        return c
+
+    def get_unconditional_conditioning(self, bs, device=&quot;cuda&quot;):
+        uc_class = self.n_classes - 1  # 1000 classes --&gt; 0 ... 999, one extra class for ucg (class 1000)
+        uc = torch.ones((bs,), device=device) * uc_class
+        uc = {self.key: uc}
+        return uc
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="2d-pose"><a class="header" href="#2d-pose">2D Pose</a></h1>
+<h2 id="信息提取-2"><a class="header" href="#信息提取-2">信息提取</a></h2>
+<p>转成图像-&gt;图像Embedding</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="拖拽交互信息"><a class="header" href="#拖拽交互信息">拖拽交互信息</a></h1>
+<h2 id="提取信息"><a class="header" href="#提取信息">提取信息</a></h2>
+<h3 id="显式编码"><a class="header" href="#显式编码">显式编码</a></h3>
+<p>K * N * S * S * C 矩阵形式的<a href="https://caterpillarstudygroup.github.io/ReadPapers/47.html#%E6%8B%96%E5%8A%A8%E7%BC%96%E7%A0%81">拖拽编码</a></p>
+<p><strong>编码方式</strong>：<br />
+这是一个hand-crafted的编码方式，编码结果为：K * N * s * s * C<br />
+K：控制点的个数<br />
+N：视频帧数<br />
+s：分辨率<br />
+c：6，分别是start location, current localtion, end_location<br />
+格子没有控制点经过填-1</p>
+<p><strong>适用场景</strong>：这种数据格式与原始视频具有相同的结构，便于特征的调制。<br />
+<strong>示例代码</strong>：不开源<br />
+<strong>开源范例</strong>: <a href="https://caterpillarstudygroup.github.io/ReadPapers/47.html">47</a></p>
+<h3 id="相对于上一帧的稀疏光流表示"><a class="header" href="#相对于上一帧的稀疏光流表示">相对于上一帧的稀疏光流表示</a></h3>
+<p>w * h * 2的 矩阵，描述相对于上一帧的位移。由于是拖拽是稀疏光流，大部分格子上是没有拖拽信息的。把这些空白填上learnable embedding，表明用户没有在这些地方指定输入。</p>
+<p><strong>适用场景</strong>：这种数据格式与原始视频具有相同的结构，便于特征的调制。<br />
+<strong>示例代码</strong>：不开源<br />
+<strong>开源范例</strong>: <a href="https://caterpillarstudygroup.github.io/ReadPapers/51.html">51</a></p>
+<h3 id="生成dense光流信息"><a class="header" href="#生成dense光流信息">生成dense光流信息</a></h3>
+<p><strong>适用场景</strong>：稀疏光流信息可能存在歧义，当需要准确地控制或者要降低学习难度时，可以先生成dense光流。<br />
+<strong>开源范例</strong>:<br />
+<a href="https://caterpillarstudygroup.github.io/ReadPapers/51.html">51</a><br />
+<a href="https://caterpillarstudygroup.github.io/ReadPapers/44.html">Motion-I2V</a></p>
+<h3 id="隐式编码"><a class="header" href="#隐式编码">隐式编码</a></h3>
+<h2 id="数据清洗-2"><a class="header" href="#数据清洗-2">数据清洗</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="标签数据的监督"><a class="header" href="#标签数据的监督">标签数据的监督</a></h1>
+<h2 id="有gt监督gt"><a class="header" href="#有gt监督gt">有GT，监督GT</a></h2>
+<h2 id="无gt构造监督信息"><a class="header" href="#无gt构造监督信息">无GT，构造监督信息</a></h2>
+<h3 id="噪声"><a class="header" href="#噪声">噪声</a></h3>
+<p>要从高噪数据生成低噪声数据</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="concat"><a class="header" href="#concat">concat</a></h1>
+<ol>
+<li>两个Clip Embedding做concat </li>
+</ol>
+<blockquote>
+<p>stablediffusion</p>
+</blockquote>
+<pre><code class="language-python">class FrozenCLIPT5Encoder(AbstractEncoder):
+    def __init__(self, clip_version=&quot;openai/clip-vit-large-patch14&quot;, t5_version=&quot;google/t5-v1_1-xl&quot;, device=&quot;cuda&quot;,
+                 clip_max_length=77, t5_max_length=77):
+        super().__init__()
+        self.clip_encoder = FrozenCLIPEmbedder(clip_version, device, max_length=clip_max_length)
+        self.t5_encoder = FrozenT5Embedder(t5_version, device, max_length=t5_max_length)
+        print(f&quot;{self.clip_encoder.__class__.__name__} has {count_params(self.clip_encoder) * 1.e-6:.2f} M parameters, &quot;
+              f&quot;{self.t5_encoder.__class__.__name__} comes with {count_params(self.t5_encoder) * 1.e-6:.2f} M params.&quot;)
+
+    def encode(self, text):
+        return self(text)
+
+    def forward(self, text):
+        clip_z = self.clip_encoder.encode(text)
+        t5_z = self.t5_encoder.encode(text)
+        return [clip_z, t5_z]
+</code></pre>
+<ol start="2">
+<li>调制</li>
+</ol>
+<p>调制是指通过调整特征中每个元素的均值和方差，使某些元素与其它元素区别开来。但又不影响特征的原始结构。</p>
+<p>调制应用于两个具有相似结构的feature，其中一个feature通过网络生成具有相同结构的2通道信息，分别是均值和方差，把均值和方差bitwise地作用到另一个feature上。</p>
+<p><strong>适用场景</strong>：两个具有相似结构的feature。<br />
+<strong>示例代码</strong>：不开源<br />
+<strong>开源范例</strong>: <a href="https://caterpillarstudygroup.github.io/ReadPapers/47.html">47</a></p>
+<ol start="3">
+<li>相加</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="不同特征的融合"><a class="header" href="#不同特征的融合">不同特征的融合</a></h1>
+<p>两个不同领域的特征融合到同一个multimodal latent space</p>
+<h2 id="mse"><a class="header" href="#mse">MSE</a></h2>
+<p><strong>融合方法</strong>：让两个特征的embedding的MSE最小。<br />
+<strong>示例代码</strong>：[TODO]<br />
+<strong>开源犯例</strong>：Bailando</p>
+<h2 id="余弦相似度"><a class="header" href="#余弦相似度">余弦相似度</a></h2>
+<p><strong>融合方法</strong>：N组特征对，让正确的N对特征对之间的余弦相似度尽量大，而剩下的\(N^2-N\)对特征对之间的余弦相似度尽量小。<br />
+<strong>示例代码</strong>：[TODO]<br />
+<strong>开源犯例</strong>：CLIP</p>
+<div style="break-before: page; page-break-before: always;"></div><p>控制信号的注入，是feature结合的一种具体的应用场景，因为比较常见，单独提出来作为一节。</p>
+<h1 id="controlnet"><a class="header" href="#controlnet">ControlNet</a></h1>
+<h1 id="condition编码后unet-feature做cross-attention"><a class="header" href="#condition编码后unet-feature做cross-attention">condition编码后UNet feature做cross attention</a></h1>
+<p>这种方法通常用于非结构化的Embedding的注入，例如Clip Embedding。</p>
+<ol>
+<li>
+<p><strong>注入方式</strong>：图像/文本条件经过Clip Embedding之后与UNet Spatial Attention Layer的第一层进行cross attention。<br />
+M
+<strong>示例代码</strong>：[TODO]
+<strong>开源范例</strong>：ModelScopeT2V<br />
+odelScopeT2V的spatial attention有两层。第一层是feature与embedding的cross attention，第二层是self-attention。 </p>
+</li>
+<li>
+<p>ControlNet</p>
+</li>
+<li>
+<p><strong>注入方式</strong>：图像经过Image Encoder之后与UNet的feature进行cross attention。<br />
+<strong>示例代码</strong>：不开源<br />
+<strong>开源范例</strong>: <a href="https://caterpillarstudygroup.github.io/ReadPapers/47.html">47</a><br />
+47中实际上是把视频首帧作为reference Image，修改UNet Spatial Layer的self attention层，改成与首帧的cross attention。所以在47的UNet Spatial Layer设计中，第一层是与(Reference Image Clip Embedding, drag token)的cross attention，第二帧是与首帧UNet Feature的cross atttention。 </p>
+</li>
+</ol>
+<h1 id="condition与noise在channel维度的concat"><a class="header" href="#condition与noise在channel维度的concat">condition与noise在channel维度的concat</a></h1>
+<p>这种方法通常用于与图像具有相似结构的Embedding的注入，例如VQGAN Embedding。
+示例代码：[TODO]<br />
+开源范例：</p>
+<ol>
+<li>Stable Diffusion（图像生成模型）</li>
+</ol>
+<blockquote>
+<p>✅ 如果是图像生成模型，condition可以是reference image的2D embedding。</p>
+</blockquote>
+<ol start="2">
+<li>ModelScopeT2V（视频生成模型）
+ModelScopeT2V的spatial attention有两层。第一层是feature与embedding的cross attention，第二层是self-attention。</li>
+</ol>
+<blockquote>
+<p>✅ 如果是视频生成模型，个人认为，reference image不适合用这种方式注入。因为reference image是静态的，不能与要生成的视频在时序上对齐。</p>
+</blockquote>
+<h1 id="condition用同样的方式embedding之后直接替换noise的某些帧"><a class="header" href="#condition用同样的方式embedding之后直接替换noise的某些帧">condition用同样的方式embedding之后直接替换noise的某些帧</a></h1>
+<p>这种方式可以实现强制要求生成的某些帧为指定内容。</p>
+<p><strong>示例代码</strong>：不开源<br />
+<strong>开源范例</strong>: <a href="https://caterpillarstudygroup.github.io/ReadPapers/44.html">Motion-I2V</a>  </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="不同数据集的结合"><a class="header" href="#不同数据集的结合">不同数据集的结合</a></h1>
+<h2 id="不同分辨率"><a class="header" href="#不同分辨率">不同分辨率</a></h2>
+<h2 id="不同质量"><a class="header" href="#不同质量">不同质量</a></h2>
+<h2 id="不同信息"><a class="header" href="#不同信息">不同信息</a></h2>
+<p>纯视频数据 + 文-视频 pair data</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="不同目标的结合"><a class="header" href="#不同目标的结合">不同目标的结合</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="预处理"><a class="header" href="#预处理">预处理</a></h1>
+<p>均值方差归一化</p>
+<h1 id="后处理"><a class="header" href="#后处理">后处理</a></h1>
+<p>上采样、超分、插帧</p>
+<h1 id="图像预处理"><a class="header" href="#图像预处理">图像预处理</a></h1>
+<blockquote>
+<blockquote>
+<p>stablediffusion</p>
+</blockquote>
+</blockquote>
+<pre><code class="language-python">def load_img(path):
+    image = Image.open(path).convert(&quot;RGB&quot;)
+    w, h = image.size
+    print(f&quot;loaded input image of size ({w}, {h}) from {path}&quot;)
+    w, h = map(lambda x: x - x % 64, (w, h))  # resize to integer multiple of 64
+    image = image.resize((w, h), resample=PIL.Image.LANCZOS)
+    image = np.array(image).astype(np.float32) / 255.0
+    image = image[None].transpose(0, 3, 1, 2)
+    image = torch.from_numpy(image)
+    return 2. * image - 1.
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="初始化"><a class="header" href="#初始化">初始化</a></h1>
+<h2 id="参数的初始化"><a class="header" href="#参数的初始化">参数的初始化</a></h2>
+<ol>
+<li>随机高斯初始化</li>
+</ol>
+<p><strong>开源范例</strong>： <a href="https://caterpillarstudygroup.github.io/ReadPapers/38.html">LORA</a></p>
+<h2 id="插件的初始化"><a class="header" href="#插件的初始化">插件的初始化</a></h2>
+<p>插件是指用于调整预训练大模型的附件，依附于预训练大模型而存在。在训练开始时，挂上插件的效果应该于没有挂插件的效果相同(效果为0)，但又要能训得起来（导数不为0），因此需要特殊的设计。</p>
+<ol>
+<li>Zero Conv</li>
+</ol>
+<p><strong>开源范例</strong>： <a href="opensource/model/">ControlNet</a></p>
+<ol start="2">
+<li>对 A 使用随机高斯初始化，对 B 使用零，因此 ΔW = BA 在训练开始时为零。</li>
+</ol>
+<p><strong>开源范例</strong>： <a href="https://caterpillarstudygroup.github.io/ReadPapers/38.html">LORA</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="时序层"><a class="header" href="#时序层">时序层</a></h1>
+<p>conv3D, temporal attention, temporal transformer</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="训练方法"><a class="header" href="#训练方法">训练方法</a></h1>
+<p>CFG</p>
+<p>spatial -&gt; temporal</p>
+<h2 id="noise-scheduler"><a class="header" href="#noise-scheduler">noise scheduler</a></h2>
+<p>continuous-time noise scheduler</p>
+<p><strong>适用场景</strong>：[?]<br />
+<strong>示例代码</strong>：不开源<br />
+<strong>开源范例</strong>: <a href="https://caterpillarstudygroup.github.io/ReadPapers/47.html">47</a>   </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="长序列推断策略"><a class="header" href="#长序列推断策略">长序列推断策略</a></h1>
+<ol>
+<li>
+<p>MultiDiffusion
+训练时无特征处理。<br />
+推断时，把推断序列切成有重叠的clip。在一个step中推断所有的clip的噪声，把overlap的噪声average，得到的噪声进入下一个step。<br />
+<strong>示例代码</strong>：[TODO]<br />
+<strong>开源范例</strong>:<br />
+<a href="https://caterpillarstudygroup.github.io/ReadPapers/37.html">37</a><br />
+MultiDiffusion</p>
+</li>
+<li>
+<p>自回归方式
+上一个clip的最后一帧作为下一个clip的起始帧</p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="图像质量"><a class="header" href="#图像质量">图像质量</a></h1>
+<p>L1, SSIM, LPIPS, FID</p>
+<h1 id="视频质量"><a class="header" href="#视频质量">视频质量</a></h1>
+<p>FID-FVD, FVD</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dataparallel"><a class="header" href="#dataparallel">DataParallel</a></h1>
+<p>只支持单机多卡，代码很方便，只需要添加一行，但是效率比较低，不推荐使用</p>
+<h2 id="局限性"><a class="header" href="#局限性">局限性</a></h2>
+<p>在DP模式中，总共只有一个进程（受到GIL很强限制）。master节点相当于参数服务器，其会向其他卡广播其参数；在梯度反向传播后，各卡将梯度集中到master节点，master节点对搜集来的参数进行平均后更新参数，再将参数统一发送到其他卡上。这种参数更新方式，会导致master节点的计算任务、通讯量很重，从而导致网络阻塞，降低训练速度。</p>
+<h2 id="优点"><a class="header" href="#优点">优点</a></h2>
+<p>代码实现简单。</p>
+<pre><code class="language-python">import os
+
+# new
+local_rank = int(os.environ[&quot;LOCAL_RANK&quot;])
+import torch
+import torch.nn as nn
+from torch import optim
+import torch.distributed as dist
+
+# 将模型加载到对应的gpu上
+torch.cuda.set_device(local_rank)
+dist.init_process_group(backend='nccl')
+device = torch.device(&quot;cuda&quot;, local_rank)
+
+# 构造模型
+model = nn.Linear(10, 10).to(device)
+model = nn.parallel.DistributedDataParallel(model, device_ids=[local_rank], output_device=local_rank)
+
+# 前向传播
+outputs = model(torch.randn(20, 10).to(device))
+labels = torch.randn(20, 10).to(device)
+loss_fn = nn.MSELoss()
+loss_fn(outputs, labels).backward()
+# 后向传播
+optimizer = optim.SGD(model.parameters(), lr=0.001)
+optimizer.step()
+</code></pre>
+<p>运行：</p>
+<pre><code>torchrun main.py
+</code></pre>
+<h1 id="参考链接"><a class="header" href="#参考链接">参考链接</a></h1>
+<p>原文链接：https://blog.csdn.net/qq_41020633/article/details/128902848 </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="distributeddataparallel"><a class="header" href="#distributeddataparallel">DistributedDataParallel</a></h1>
+<p>支持多机多卡，效率高，但是要折腾一下代码，DDP是一个支持多机多卡、分布式训练的深度学习工程方法。</p>
+<p>在DDP模式下，会有N个进程被启动，每个进程在一张卡上加载一个模型，这些模型的参数在数值上是相同的。
+在模型训练时，各个进程通过一种叫Ring-Reduce的方法与其他进程通讯，交换各自的梯度，从而获得所有进程的梯度；
+各个进程用平均后的梯度更新自己的参数，因为各个进程的初始参数、更新梯度是一致的，所以更新后的参数也是完全相同的。</p>
+<p>每个进程一张卡，这是DDP的最佳使用方法。
+每个进程多张卡，并行模式。一个模型的不同部分分布在不同的卡上面。例如，网络的前半部分在0号卡上，后半部分在1号卡上。这种场景，一般是因为我们的模型非常大，大到一张卡都塞不下batch size = 1的一个模型。</p>
+<ul>
+<li>group，即进程组。默认情况下，只有一个组。这个可以先不管，一直用默认的就行。</li>
+<li>world size，表示全局的并行数，如果只开了一个进程那就是1。</li>
+<li>rank，当前进程的序号，用于进程间通讯。对于16的world size来说，就是0,1,2,…,15。注意：rank=0的进程就是master进程。</li>
+<li>local_rank，又一个序号。这是每台机子上的进程的序号。机器一上有0,1,2,3,4,5,6,7，机器二上也有0,1,2,3,4,5,6,7。<strong>一般情况下，你需要用这个local_rank来手动设置当前模型是跑在当前机器的哪块GPU上面的。</strong></li>
+</ul>
+<pre><code class="language-python"># 获取world size，在不同进程里都是一样的
+torch.distributed.get_world_size()
+# 获取rank，每个进程都有自己的序号，各不相同
+torch.distributed.get_rank()
+# 获取local_rank。一般情况下，你需要用这个local_rank来手动设置当前模型是跑在当前机器的哪块GPU上面的。
+torch.distributed.local_rank()
+</code></pre>
+<p>Demo:</p>
+<pre><code class="language-python">## main.py文件
+import os
+import torch
+import torch.nn as nn
+from torch import optim
+from torch.nn.parallel import DistributedDataParallel as DDP
+import torch.distributed as dist
+from torch.utils.data import DataLoader, data
+import warnings 
+warnings.filterwarnings('ignore')
+local_rank = int(os.environ[&quot;LOCAL_RANK&quot;])
+
+torch.cuda.set_device(local_rank)
+dist.init_process_group(backend='nccl')
+device = torch.device(&quot;cuda&quot;, local_rank)
+
+# print(f&quot;world size: {torch.distributed.get_world_size()}&quot;)
+print(f&quot;rank: {torch.distributed.get_rank()}&quot;)
+
+class CPPDataset(data.Dataset):
+    def __init__(self, seqs, labels):
+        self.seqs = seqs
+        self.labels = labels
+    def __len__(self):
+        return len(self.seqs)
+    def __getitem__(self, idx):
+        return self.seqs[idx], self.labels[idx]
+
+
+# 构造模型
+model = nn.Linear(10, 1).to(device)
+model = DDP(model, device_ids=[local_rank], output_device=local_rank)
+
+X_train = torch.Tensor(64,10).to(device)
+y_train = torch.zeros(64).to(device)
+train_dataset = CPPDataset(X_train, y_train)
+
+# 新增1：使用DistributedSampler，DDP帮我们把细节都封装起来了。用，就完事儿！
+#       sampler的原理，后面也会介绍。
+train_sampler = torch.utils.data.distributed.DistributedSampler(train_dataset)
+# 需要注意的是，这里的batch_size指的是每个进程下的batch_size。也就是说，总batch_size是这里的batch_size再乘以并行数(world_size)。
+trainloader = torch.utils.data.DataLoader(train_dataset, batch_size=4, sampler=train_sampler)
+
+loss_fn = nn.MSELoss()
+
+for epoch in range(4):
+    # 新增2：设置sampler的epoch，DistributedSampler需要这个来维持各个进程之间的相同随机数种子
+    trainloader.sampler.set_epoch(epoch)
+    # 后面这部分，则与原来完全一致了。
+    for x, yy in trainloader:
+        prediction = model(x)
+        
+        loss = loss_fn(prediction.squeeze(), yy)
+        loss.backward()
+        optimizer = optim.SGD(model.parameters(), lr=0.001)
+        optimizer.step()
+        
+    # 保存模型参数只需要在rank=0上保存
+    if dist.get_rank() == 0:
+            checkpoint = {
+                &quot;net&quot;: model.module.state_dict()
+            }
+            torch.save(checkpoint, 'model.pt'))
+</code></pre>
+<p>最终通过运行torchrun --nproc_per_node 4 main.py 即可实现单机多卡训练。
+当你希望在一个机器上同时跑两个torchrun程序，请使用torchrun --nproc_per_node 4 -master_port=22224 main.py，master_port的数字不能与正在运行的程序一致，会产生冲突。</p>
+<p>注意点：</p>
+<ol>
+<li>保存模型 checkpoint、记录 tensorboard、输出准确率、甚至是 tqdm 都只让主进程（rank0）执行，其他进程不执行。</li>
+<li>在用 DDP 封装模型后，模型的本体（我们定义的那个类）是 model.module；所以保存模型时，最好保存 model.module.state_dict()，否则存下来的参数的 key 前面会多一个 module.，不便再次 load 模型。</li>
+<li>我们经常会在训练的每个 epoch 后进行 evaluate / inference，为避免有些进程测试完之后开始了下一轮训练，但其他进程还在测试，最好在每个 epoch 开始训练前（或者每个 epoch 完成训练后）用 dist.barrier() 同步一下。对于数据的读取是采用主进程预读取并缓存，然后其它进程从缓存中读取，不同进程之间的数据同步具体通过torch.distributed.barrier()实现。</li>
+<li>单卡 evaluate / inference 用的模型最好是本地模型 model.module 而非 DDP 包装的模型，否则非主进程会在第 3 条的 dist.barrier() 处卡死，推测原因是 DDP 包装的模型会在一些地方同步 bucket。</li>
+<li>如果模型在forward的时候出现没有使用的output，比如(logits, _)= model(x_pad, mask)，则有可能会报错，报错内容如下。需要在封装DDP的地方增加一个参数 find_unused_parameters=True)</li>
+</ol>
+<h1 id="参考链接-1"><a class="header" href="#参考链接-1">参考链接</a></h1>
+<p>原文链接：https://blog.csdn.net/qq_41020633/article/details/128902848</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="argparse"><a class="header" href="#argparse">argparse</a></h1>
+<pre><code class="language-python">import argparse
+
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(&quot;--src_img&quot;, type=str, default=&quot;./inputs/src_img.png&quot;)
+    args = parser.parse_args()
+    return args
+
+args = parse_args()
+</code></pre>
+<h1 id="omegaconf"><a class="header" href="#omegaconf">omegaconf</a></h1>
+<pre><code class="language-python">from omegaconf import OmegaConf
+
+config = OmegaConf.load(args.config)
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><ol>
+<li>读入图像</li>
+</ol>
+<pre><code class="language-python">src_img = cv2.imread(src_img_p)
+</code></pre>
+<ol start="2">
+<li>读入视频</li>
+</ol>
+<pre><code class="language-python">dri_img_lst = []
+
+cap = cv2.VideoCapture(dri_video_p)
+while True:
+    ret, f = cap.read()
+    if not ret: break
+    dri_img_lst.append(f)
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="theme/pagetoc.js"></script>
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+    </body>
+</html>
