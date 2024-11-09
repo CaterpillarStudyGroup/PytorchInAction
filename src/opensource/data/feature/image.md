@@ -8,6 +8,13 @@
 
 通常用于与人相关的应用，例如要提取人的动作（趋势）
 
+```python
+from dwpose.annotator.dwpose import DWposeDetector
+
+dwpose = DWposeDetector()
+pose, posedict = dwpose(img)
+```
+
 分割、crop
 
 ### 隐式提取
